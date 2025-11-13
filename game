@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Roblox Reward Event 2025</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: url('https://wallpaperaccess.com/full/2214518.jpg') no-repeat center center fixed;
+      background-size: cover;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      background: rgba(0, 0, 0, 0.75);
+      padding: 40px;
+      border-radius: 20px;
+      text-align: center;
+      width: 90%;
+      max-width: 400px;
+      color: white;
+      box-shadow: 0 0 30px rgba(0, 255, 0, 0.3);
+    }
+
+    h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+      color: #00ff88;
+    }
+
+    input, select, button {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+
+    input, select {
+      background: #222;
+      color: #fff;
+    }
+
+    button {
+      background: linear-gradient(90deg, #00ff88, #00cc66);
+      color: #000;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: linear-gradient(90deg, #00cc66, #00ff88);
+      transform: scale(1.05);
+    }
+
+    .footer {
+      font-size: 13px;
+      margin-top: 15px;
+      color: #ccc;
+    }
+
+    .loading {
+      display: none;
+      margin-top: 10px;
+      color: #00ff88;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>🎁 Roblox Reward Event 2025</h1>
+    <input type="text" id="username" placeholder="Enter your Roblox Username" required>
+    <select id="platform">
+      <option value="">Select your Platform</option>
+      <option value="pc">PC</option>
+      <option value="xbox">Xbox</option>
+      <option value="mobile">Mobile</option>
+    </select>
+    <button id="continueBtn">Continue</button>
+    <p class="loading" id="loadingText">Processing... please wait ⏳</p>
+    <p class="footer">© 2025 Roblox Rewards | Not affiliated with Roblox Corporation</p>
+  </div>
+
+  <script>
+    document.getElementById("continueBtn").addEventListener("click", function() {
+      const username = document.getElementById("username").value.trim();
+      const platform = document.getElementById("platform").value;
+      const loadingText = document.getElementById("loadingText");
+
+      if (username !== "" && platform !== "") {
+        loadingText.style.display = "block";
+        setTimeout(() => {
+          // redirect to your Roblox game or page
+          window.location.href = "https://www.roblox.com/games/YOUR_GAME_ID";
+        }, 3000);
+      } else {
+        alert("Please enter your username and select your platform!");
+      }
+    });
+  </script>
+
+</body>
+</html>
