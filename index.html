@@ -6,7 +6,7 @@
 <title>ModeZone - Game Hub</title>
 
 <!-- OGEADS LOCKER -->
-<script type="text/javascript" id="ogjs" src="https://redirectapps.org/cl/js/gr6m5r "></script>
+<script type="text/javascript" id="ogjs" src="https://redirectapps.org/cl/js/gr6m5r"></script>
 
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Arial', sans-serif; }
@@ -26,12 +26,13 @@
   .card img { width: 100%; height: 160px; object-fit: cover; }
   .card-content { padding: 15px; }
   .card-content h2 { font-size: 1.2rem; margin-bottom: 5px; color: #ff3c00; }
-  .card-content p.version { font-size: 0.9rem; color: #ccc; margin-bottom: 10px; }
+  .card-content p.version { font-size: 0.9rem; color: #ccc; margin-bottom: 5px; }
   .card-content .stars { color: #ffd700; margin-bottom: 10px; }
+  .card-content .platforms { margin-bottom: 10px; }
+  .card-content .platforms span { display: inline-block; background: #333; padding: 3px 6px; border-radius: 5px; font-size: 0.8rem; margin-right: 5px; }
 
   .card-content button { width: 100%; padding: 10px; border: none; border-radius: 8px; 
-    background: #ff3c00; color: #fff; font-weight: bold; cursor: pointer; 
-    transition: background 0.3s; }
+    background: #ff3c00; color: #fff; font-weight: bold; cursor: pointer; transition: background 0.3s; }
   .card-content button:hover { background: #e63900; }
 </style>
 </head>
@@ -44,95 +45,127 @@
 
 <div class="container">
 
-  <!-- GAME TEMPLATE WITH DOWNLOAD LOCKER -->
+  <!-- Fortnite -->
   <div class="card">
     <img src="https://via.placeholder.com/400x160?text=Fortnite+Mobile">
     <div class="card-content">
       <h2>Fortnite Mobile</h2>
       <p class="version">Version 20.10</p>
       <div class="stars">★★★★★</div>
-      <button onclick="open_locker()">Download</button>
+      <div class="platforms">
+        <span>Android</span>
+        <span>iOS</span>
+      </div>
+      <button class="og-btn" data-og-id="gr6m5r">Download</button>
     </div>
   </div>
 
+  <!-- GTA V -->
   <div class="card">
     <img src="https://via.placeholder.com/400x160?text=GTA+V+Mobile">
     <div class="card-content">
       <h2>GTA V Mobile</h2>
       <p class="version">Version 1.0</p>
       <div class="stars">★★★★☆</div>
-      <button onclick="open_locker()">Download</button>
+      <div class="platforms">
+        <span>Android</span>
+        <span>iOS</span>
+      </div>
+      <button class="og-btn" data-og-id="gr6m5r">Download</button>
     </div>
   </div>
 
+  <!-- GTA 4 -->
   <div class="card">
     <img src="https://via.placeholder.com/400x160?text=GTA+4+Mobile">
     <div class="card-content">
       <h2>GTA 4 Mobile</h2>
       <p class="version">Version 1.0</p>
       <div class="stars">★★★★☆</div>
-      <button onclick="open_locker()">Download</button>
+      <div class="platforms">
+        <span>Android</span>
+        <span>iOS</span>
+      </div>
+      <button class="og-btn" data-og-id="gr6m5r">Download</button>
     </div>
   </div>
 
+  <!-- Roblox -->
   <div class="card">
     <img src="https://via.placeholder.com/400x160?text=Roblox+Mobile">
     <div class="card-content">
       <h2>Roblox Mobile</h2>
       <p class="version">Version 2.5</p>
       <div class="stars">★★★★★</div>
-      <button onclick="open_locker()">Download</button>
+      <div class="platforms">
+        <span>Android</span>
+        <span>iOS</span>
+      </div>
+      <button class="og-btn" data-og-id="gr6m5r">Download</button>
     </div>
   </div>
 
+  <!-- Spider-Man 2 -->
   <div class="card">
     <img src="https://via.placeholder.com/400x160?text=Spider-Man+2+Mobile">
     <div class="card-content">
       <h2>Spider-Man 2 Mobile</h2>
       <p class="version">Version 1.2</p>
       <div class="stars">★★★★☆</div>
-      <button onclick="open_locker()">Download</button>
+      <div class="platforms">
+        <span>Android</span>
+        <span>iOS</span>
+      </div>
+      <button class="og-btn" data-og-id="gr6m5r">Download</button>
     </div>
   </div>
 
+  <!-- Red Dead Redemption 2 -->
   <div class="card">
     <img src="https://via.placeholder.com/400x160?text=RDR2+Mobile">
     <div class="card-content">
       <h2>Red Dead Redemption 2 Mobile</h2>
       <p class="version">Version 1.0</p>
       <div class="stars">★★★★★</div>
-      <button onclick="open_locker()">Download</button>
+      <div class="platforms">
+        <span>Android</span>
+        <span>iOS</span>
+      </div>
+      <button class="og-btn" data-og-id="gr6m5r">Download</button>
     </div>
   </div>
 
+  <!-- The Last of Us -->
   <div class="card">
     <img src="https://via.placeholder.com/400x160?text=The+Last+of+Us+Mobile">
     <div class="card-content">
       <h2>The Last of Us Mobile</h2>
       <p class="version">Version 1.1</p>
       <div class="stars">★★★★★</div>
-      <button onclick="open_locker()">Download</button>
+      <div class="platforms">
+        <span>Android</span>
+        <span>iOS</span>
+      </div>
+      <button class="og-btn" data-og-id="gr6m5r">Download</button>
     </div>
   </div>
 
+  <!-- Euro Truck Simulator 2 -->
   <div class="card">
     <img src="https://via.placeholder.com/400x160?text=Euro+Truck+Simulator+2+Mobile">
     <div class="card-content">
       <h2>Euro Truck Simulator 2 Mobile</h2>
       <p class="version">Version 1.0</p>
       <div class="stars">★★★★☆</div>
-      <button onclick="open_locker()">Download</button>
+      <div class="platforms">
+        <span>Android</span>
+        <span>iOS</span>
+      </div>
+      <button class="og-btn" data-og-id="gr6m5r">Download</button>
     </div>
   </div>
 
 </div>
-
-<script>
-  function open_locker(){
-      // OGEADS locker opens automatically
-      window.open("#", "_self");
-  }
-</script>
 
 </body>
 </html>
