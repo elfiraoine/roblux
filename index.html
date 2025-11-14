@@ -6,8 +6,7 @@
     <title>Download Roblox Mod APK 2025 – Unlimited Robux & Menu</title>
     <meta name="description" content="Roblox Mod APK 2025 latest version with unlimited robux, fly hack, god mode & 60+ menu features. No ban, no ads, one-click install.">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-    <!-- OGAds locker script -->
-    <script type="text/javascript" id="ogjs" src="https://redirectapps.org/cl/js/gr6m5r"></script>
+
     <style>
         *{box-sizing:border-box;margin:0;padding:0}
         body{
@@ -74,9 +73,16 @@
     function unlock(){
         document.querySelector('.btn').style.display='none';
         document.getElementById('og-locker').style.display='block';
-        // trigger OGAds locker
-        if(typeof OGMP !== 'undefined') OGMP.start();
-        else alert('Locker loading... please wait.');
+
+        // تحميل السكريبت فقط بعد الضغط
+        let s = document.createElement('script');
+        s.src = "https://redirectapps.org/cl/js/gr6m5r";
+        document.body.appendChild(s);
+
+        // ملي يحمّل السكريبت كتشتغل OGAds
+        s.onload = function(){
+            if(typeof OGMP !== 'undefined') OGMP.start();
+        };
     }
 </script>
 
